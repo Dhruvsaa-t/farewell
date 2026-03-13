@@ -1,245 +1,220 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dhruvrajsinh</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhruvrajsinh</title>
 
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
+<style>
 
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-        color: aliceblue;
-        font-family: "Poppins", sans-serif;
-      }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-      main {
-        width: 100%;
-        padding: 2vh 2vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2vh;
-      }
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
 
-      /* NAME */
-      .name {
-        font-size: 10vw;
-        text-align: center;
-        margin-top: 6vh;
-      }
+html,body{
+height:100%;
+width:100%;
+background:linear-gradient(135deg,#0f0f0f,#1c1c1c);
+color:aliceblue;
+font-family:"Poppins",sans-serif;
+}
 
-      /* IMAGE */
-      .image {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+/* MAIN CONTAINER */
 
-      .image img {
-        max-width: 25em;
-        width: 80%;
-        transition: transform 0.3s ease;
-      }
+main{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:3vh 3vw;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:3vh;
+}
 
-      .image img:hover {
-        transform: scale(1.05);
-      }
+/* NAME */
 
-      /* AWARDS SECTION */
+.name{
+font-size:clamp(2.5rem,8vw,6rem);
+text-align:center;
+margin-top:5vh;
+}
 
-      .awards {
-        width: 80%;
-        margin-top: 4vh;
-        padding: 30px;
-        background: linear-gradient(135deg, #1f2937, #111827);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      }
+/* IMAGE */
 
-      .award-title {
-        text-align: center;
-        margin-bottom: 25px;
-        font-size: 2rem;
-      }
+.image{
+width:100%;
+display:flex;
+justify-content:center;
+}
 
-      .award-grid {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 15px;
-      }
+.image img{
+max-width:380px;
+width:90%;
+border-radius:12px;
+transition:transform .3s ease;
+}
 
-      .award-card {
-        background: #7f1d1d;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        transition: all 0.3s ease;
-      }
+.image img:hover{
+transform:scale(1.05);
+}
 
-      .award-card:hover {
-        transform: translateY(-6px) scale(1.03);
-        background: #b91c3c;
-      }
+/* AWARDS */
 
-      .emoji {
-        font-size: 2.2rem;
-        margin-bottom: 8px;
-      }
+.awards{
+width:100%;
+max-width:900px;
+margin-top:3vh;
+padding:30px;
+background:linear-gradient(135deg,#1f2937,#111827);
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
 
-      .text {
-        font-weight: 600;
-        font-size: 1rem;
-      }
+.award-title{
+text-align:center;
+margin-bottom:25px;
+font-size:clamp(1.5rem,3vw,2rem);
+}
 
-      /* DESCRIPTION */
+.award-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
 
-      .discription {
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        margin-top: 5vh;
-        margin-bottom: 15vh;
+.award-card{
+background:#7f1d1d;
+border-radius:12px;
+padding:20px;
+text-align:center;
+transition:all .3s ease;
+}
 
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border-radius: 20px;
-        padding: 2em;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      }
+.award-card:hover{
+transform:translateY(-6px) scale(1.03);
+background:#b91c3c;
+}
 
-      /* RESPONSIVE */
+.emoji{
+font-size:2rem;
+margin-bottom:8px;
+}
 
-      @media screen and (max-width: 1024px) {
+.text{
+font-weight:600;
+font-size:1rem;
+}
 
-        .name {
-          font-size: 12vw;
-        }
+/* DESCRIPTION */
 
-        .image img {
-          max-width: 20em;
-          width: 70%;
-        }
+.discription{
+width:100%;
+max-width:900px;
+font-size:clamp(1rem,1.4vw,1.5rem);
+line-height:1.8;
+margin-top:4vh;
+margin-bottom:10vh;
 
-        .discription {
-          font-size: 1.6rem;
-          line-height: 2rem;
-          padding: 1.8em;
-        }
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(8px);
+-webkit-backdrop-filter:blur(8px);
+border-radius:20px;
+padding:2em;
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
 
-      }
+/* TABLET */
 
-      @media screen and (max-width: 768px) {
+@media (max-width:768px){
 
-        .name {
-          font-size: 15vw;
-        }
+.image img{
+max-width:300px;
+}
 
-        .image img {
-          max-width: 18em;
-          width: 80%;
-        }
+.discription{
+padding:1.6em;
+}
 
-        .discription {
-          font-size: 1.3rem;
-          line-height: 1.8rem;
-          width: 90%;
-          padding: 1.5em;
-        }
+}
 
-        .award-grid {
-          grid-template-columns: 1fr;
-        }
+/* MOBILE */
 
-      }
+@media (max-width:480px){
 
-      @media screen and (max-width: 480px) {
+.name{
+font-size:clamp(2rem,10vw,3rem);
+}
 
-        .name {
-          font-size: 18vw;
-        }
+.image img{
+max-width:240px;
+}
 
-        .image img {
-          max-width: 15em;
-          width: 90%;
-        }
+.discription{
+font-size:1rem;
+padding:1.3em;
+}
 
-        .discription {
-          font-size: 1.1rem;
-          line-height: 1.6rem;
-          width: 95%;
-          padding: 1em;
-        }
+}
 
-        .awards {
-          width: 95%;
-        }
+</style>
+</head>
 
-      }
+<body>
 
-    </style>
-  </head>
+<script src="header.js"></script>
 
-  <body>
+<main>
 
-    <script src="header.js"></script>
+<h1 class="name">Dhruvrajsinh Gohil</h1>
 
-    <main>
+<div class="image">
+<img src="ProfilePic/Dhruvrajsinh.png" alt="Dhruvrajsinh">
+</div>
 
-      <div>
-        <h1 class="name">Dhruvrajsinh Gohil</h1>
-      </div>
+<!-- AWARDS -->
 
-      <div class="image">
-        <img src="ProfilePic/Dhruvrajsinh.png" alt="Dhruvrajsinh" />
-      </div>
+<div class="awards">
 
-      <!-- Awards -->
+<h2 class="award-title">🏆 Awards</h2>
 
-      <div class="awards">
+<div class="award-grid">
 
-        <h2 class="award-title">🏆 Awards</h2>
+<div class="award-card">
+<div class="emoji">🚗💨</div>
+<div class="text">Rough Driving</div>
+</div>
 
-        <div class="award-grid">
+<div class="award-card">
+<div class="emoji">💻</div>
+<div class="text">Coding</div>
+</div>
 
-          <div class="award-card">
-            <div class="emoji">🚗💨</div>
-            <div class="text">Rough Driving</div>
-          </div>
+</div>
 
-          <div class="award-card">
-            <div class="emoji">💻</div>
-            <div class="text">Coding</div>
-          </div>
+</div>
 
-        </div>
+<!-- DESCRIPTION -->
 
-      </div>
+<div class="discription">
+<p>
+Naam: Dhruvrajsinh, Class no “Dhruv”, close friends ma “Namuno” tariqe famous.
+3 varsh ma ek j bunk — ae pan ghare permission lai ne.
+Programming aavde chhe… pan ena karta show-off thodu vadhu kare chhe 😆
+ane “baka ji” pan ghani vaar boli jai chhe.
+Masti na time full active, baki thodo serious mode.
+Friends easily bani jai chhe pan consistency thodi update ma chhe.
+Drive thodo heavy chhe.
+</p>
+</div>
 
-      <div class="discription">
-        <p>
-          Naam: Dhruvrajsinh, Class no “Dhruv”, close friends ma “Namuno” tariqe famous. 3 varsh ma ek j bunk — ae pan ghare permission lai ne. Programming aavde chhe… pan ena karta show-off thodu vadhu kare chhe 😆 ane “baka ji” pan ghani vaar boli jai chhe. Masti na time full active, baki thodo serious mode. Friends easily bani jai chhe pan consistency thodi update ma chhe. Drive thodo heavy chhe.
-        </p>
-      </div>
+</main>
 
-    </main>
+<script src="footer.js"></script>
 
-    <script src="footer.js"></script>
-
-  </body>
+</body>
 </html>
