@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+      }
+
+      main {
+        width: 100%;
+        padding: 2vh 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+      }
+
+      /* NAME */
+      .name {
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 6vh;
+      }
+
+      /* IMAGE */
+      .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image img {
+        max-width: 25em;
+        width: 80%;
+        transition: transform 0.3s ease;
+      }
+
+      .image img:hover {
+        transform: scale(1.05);
+      }
+
+      /* AWARDS SECTION */
+
+      .awards {
+        width: 80%;
+        margin-top: 4vh;
+        padding: 30px;
+        background: linear-gradient(135deg, #1f2937, #111827);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      }
+
+      .award-title {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 2rem;
+      }
+
+      .award-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+      }
+
+      .award-card {
+        background: #7f1d1d;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .award-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        background: #b91c3c;
+      }
+
+      .emoji {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+      }
+
+      .text {
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      /* GLASS BOX FOR PARAGRAPH */
+
+      .discription {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-top: 5vh;
+        margin-bottom: 15vh;
+
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 2em;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      }
+
+      /* RESPONSIVE */
+
+      @media screen and (max-width: 1024px) {
+
+        .name {
+          font-size: 12vw;
+        }
+
+        .image img {
+          max-width: 20em;
+          width: 70%;
+        }
+
+        .discription {
+          font-size: 1.6rem;
+          line-height: 2rem;
+          padding: 1.8em;
+        }
+
+      }
+
+      @media screen and (max-width: 768px) {
+
+        .name {
+          font-size: 15vw;
+        }
+
+        .image img {
+          max-width: 18em;
+          width: 80%;
+        }
+
+        .discription {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+          width: 90%;
+          padding: 1.5em;
+        }
+
+        .award-grid{
+          grid-template-columns:1fr;
+        }
+
+      }
+
+      @media screen and (max-width: 480px) {
+
+        .name {
+          font-size: 18vw;
+        }
+
+        .image img {
+          max-width: 15em;
+          width: 90%;
+        }
+
+        .discription {
+          font-size: 1.1rem;
+          line-height: 1.6rem;
+          width: 95%;
+          padding: 1em;
+        }
+
+        .awards{
+          width:95%;
+        }
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <script src="header.js"></script>
+
+    <main>
+
+      <div>
+        <h1 class="name">Ayush Makwana</h1>
+      </div>
+
+      <div class="image">
+        <img src="ProfilePic/Ayush.png" alt="Ayush" />
+      </div>
+
+      <!-- Awards -->
+
+      <div class="awards">
+
+        <h2 class="award-title">🏆 Awards</h2>
+
+        <div class="award-grid">
+
+          <div class="award-card">
+            <div class="emoji">😎</div>
+            <div class="text">Attitude Award</div>
+          </div>
+
+          <div class="award-card">
+            <div class="emoji">❤️</div>
+            <div class="text">Most Experience in Relationships</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="discription">
+        <p>
+          Thodo attitude mode ma rahe chhe ane magaj jaldi garam thai jai chhe 😄. Ego thodu sensitive version chhe. Ena pase ek  ni bandhukdi pan chhe je thi friends ne maja ma daraave chhe. Friends pase haju 2 davat pending chhe. Manav eno best friend chhe, ane future ma shayad ek special nikah davat pan mali jai 😉
+        </p>
+      </div>
+
+    </main>
+
+    <script src="footer.js"></script>
+
+  </body>
+</html>

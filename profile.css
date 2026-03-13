@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+/* ===== Glass Card ===== */
+.boxes {
+    width: 24vw;
+    min-height: 60vh;
+    padding: 3vh 2vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.5),
+        inset 0 0 8px rgba(255,255,255,0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boxes:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* ===== Profile Image ===== */
+.profilePicture {
+    width: 9em;
+    height: 9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.profilePicture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* ===== Profile Name ===== */
+.profileName {
+    font-size: 1.8vw;
+    /* font-family: "Sofadi One", system-ui; */
+    /* font-family: "Syne", sans-serif; */
+    font-family: "Italiana";
+    font-weight: 100;
+    text-align: center;
+    color: #662727;
+}
+
+/* ===== Description ===== */
+.profileDiscription {
+    font-size: 1vw;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    opacity: 0.9;
+    line-height: 1.4rem;
+    padding: 0 0.5em;
+}
+
+/* ===== Visit Button ===== */
+.VisitBtn {
+    padding: 2vh 3vw;
+    border-radius: 3vh;
+    background: linear-gradient(135deg, rgb(190, 61, 14), #fd8026);
+    border: none;
+    color: antiquewhite;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VisitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 106, 0, 0.6);
+    color: black;
+    cursor: pointer;
+}
+
+/* ===== Responsive Styling ===== */
+@media screen and (max-width: 1200px) {
+    .boxes { width: 30vw; }
+    .profileName { font-size: 2vw; }
+    .profileDiscription { font-size: 1vw; }
+}
+
+@media screen and (max-width: 992px) {
+    .boxes { width: 40vw; }
+    .profileName { font-size: 2.5vw; }
+    .profileDiscription { font-size: 1.1vw; }
+}
+
+@media screen and (max-width: 768px) {
+    .boxes { width: 70vw; padding: 3vh 4vw; }
+    .profileName { font-size: 3vw; }
+    .profileDiscription { font-size: 1.9vw; }
+    .VisitBtn { padding: 1.5vh 4vw; font-size: 0.95rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .boxes { width: 90vw; padding: 2.5vh 4vw; }
+    .profileName { font-size: 4vw; }
+    .profileDiscription { font-size: 2vw; line-height: 1.3rem; }
+    .VisitBtn { font-size: 0.9rem; padding: 1.2vh 3vw; }
+}

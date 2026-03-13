@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tushar</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+      }
+
+      main {
+        width: 100%;
+        padding: 2vh 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+      }
+
+      /* NAME */
+      .name {
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 6vh;
+      }
+
+      /* IMAGE */
+      .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image img {
+        max-width: 25em;
+        width: 80%;
+        transition: transform 0.3s ease;
+      }
+
+      .image img:hover {
+        transform: scale(1.05);
+      }
+
+      /* GLASS BOX FOR PARAGRAPH */
+      .discription {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-top: 5vh;
+        margin-bottom: 15vh;
+
+        /* Glass effect */
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 2em;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      }
+
+      /* RESPONSIVE STYLING */
+      @media screen and (max-width: 1024px) {
+        .name {
+          font-size: 12vw;
+        }
+        .image img {
+          max-width: 20em;
+          width: 70%;
+        }
+        .discription {
+          font-size: 1.6rem;
+          line-height: 2rem;
+          padding: 1.8em;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .name {
+          font-size: 15vw;
+        }
+        .image img {
+          max-width: 18em;
+          width: 80%;
+        }
+        .discription {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+          width: 90%;
+          padding: 1.5em;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .name {
+          font-size: 18vw;
+        }
+        .image img {
+          max-width: 15em;
+          width: 90%;
+        }
+        .discription {
+          font-size: 1.1rem;
+          line-height: 1.6rem;
+          width: 95%;
+          padding: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="header.js"></script>
+
+    <main>
+      <div>
+        <h1 class="name">Tushar Italiya</h1>
+      </div>
+      <div class="image">
+        <img src="ProfilePic/Tushar.png" alt="Tushar" />
+      </div>
+      <div class="discription">
+        <p>
+          “Sasto Devayat” tariqe famous. Devayat Khavad no right hand. Baka-jiki bolva ma expert ane moremora karva ma pan master 😄. UPSC/GPSC ni tayari ma busy. Class ni almost badhi information ena pase ready hoy. Friendship circle moto chhe pan mostly boys sathe. Attitude pan full on.
+        </p>
+      </div>
+    </main>
+
+    <script src="footer.js"></script>
+  </body>
+</html>
