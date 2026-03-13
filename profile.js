@@ -37,7 +37,7 @@
         link.href = profile.link || '#';
         const button = document.createElement('button');
         button.className = 'VisitBtn';
-        button.textContent = 'More Info..';
+        button.textContent = 'see awards...';
         link.appendChild(button);
 
         // Append all to card
@@ -59,3 +59,4 @@
     { image:'ProfilePic/Tushar.png', name:'Sasto Devayat', description:'“Sasto Devayat” tariqe famous. Devayat Khavad no right hand. Baka-jiki bolva ma expert ane moremora karva ma pan master 😄. UPSC/GPSC ni tayari ma busy. Class ni almost badhi information ena pase ready hoy. Friendship circle moto chhe pan mostly boys sathe. Attitude pan full on.', link:'Tushar.html' }
 
 ]);
+
